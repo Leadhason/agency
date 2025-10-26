@@ -7,7 +7,7 @@ const AboutSection = () => {
         <div className="flex w-full items-center p-5 mt-20">
             <p className="w-lg text-left text-5xl font-semibold leading-relaxed">A community built on the love of golf</p>
         </div>
-        <div className="grid grid-cols-2 gap-10 border w-full p-5">
+        <div className="grid grid-cols-2 gap-10 w-full p-5">
             <div className="flex flex-col">
                 <div className="flex w-md h-md rounded-lg mb-4">
                     <Image 
@@ -34,7 +34,7 @@ const AboutSection = () => {
                     />
                 </div>
                 <div className="flex">
-                    <p className="text-lg text-gray-500">Where passion meets precision, and every swing tells a story. At Golfory, we believe that golf is more than just a sport it’s a lifestyle a community, & a journey of continuous improvement.</p>
+                    <p className="text-md text-gray-500">Where passion meets precision, and every swing tells a story. At Golfory, we believe that golf is more than just a sport it’s a lifestyle a community, & a journey of continuous improvement.</p>
                 </div>
             </div>
         </div>
