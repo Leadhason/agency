@@ -8,20 +8,20 @@ const players = [
       id: 1,
       title: "Abdullah Zachari",
       subtitle: "Guidance. Negotiation. Success.",
-      image: "/player-1.jpeg",
+      image: "/player-6.jpeg",
       href: "/player-representation"
     },
     {
       id: 2,
       title: "Kweku Sam",
       subtitle: "Securing the best for our clients.",
-      image: "/player-2.jpeg",
+      image: "/player-7.jpeg",
     },
     {
         id: 3,
         title: "King Cobra",
         subtitle: "Guidance. Negotiation. Success.",
-        image: "/player-3.jpeg",
+        image: "/player-8.jpeg",
         href: "/player-representation"
       },
       {

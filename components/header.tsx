@@ -14,11 +14,19 @@ const Header = () => {
             </h1>
             
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center justify-center gap-5 max-w-md bg-white/50 p-3 px-6 text-md font-light rounded-lg mx-auto">
-                <Link href="/" className="hover:text-gray-700 hover:underline-offset-6 hover:underline cursor-pointer transition-all duration-300">Home</Link>
-                <Link href="/"  className="hover:text-gray-700 hover:underline-offset-6 hover:underline cursor-pointer transition-all duration-300">About</Link>
-                <Link href="/"  className="hover:text-gray-700 hover:underline-offset-6 hover:underline cursor-pointer transition-all duration-300">Services</Link>
-                <Link href="/"  className="hover:text-gray-700 hover:underline-offset-6 hover:underline cursor-pointer transition-all duration-300">Contact</Link>
+            <div className="hidden lg:flex items-center justify-center gap-5 max-w-md bg-white/50 p-3 px-10 text-md font-light rounded-lg mx-auto">
+                <Link href="/" className="hover:text-gray-700 cursor-pointer transition-all duration-300 group relative">Home
+                    <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-[1.5px] bg-gray-700 group-hover:w-full transition-all duration-300"></span>
+                </Link>
+                <Link href="/"  className="hover:text-gray-700 cursor-pointer transition-all duration-300 group relative">About
+                    <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-[1.5px] bg-gray-700 group-hover:w-full transition-all duration-300"></span>
+                </Link>
+                <Link href="/"  className="hover:text-gray-700 cursor-pointer transition-all duration-300 group relative">Services
+                    <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-[1.5px] bg-gray-700 group-hover:w-full transition-all duration-300"></span>
+                </Link>
+                <Link href="/"  className="hover:text-gray-700 cursor-pointer transition-all duration-300 group relative">Contact
+                    <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-[1.5px] bg-gray-700 group-hover:w-full transition-all duration-300"></span>
+                </Link>
             </div>
 
             {/* Mobile Navigation Button */}
