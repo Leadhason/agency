@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { useScrollReveal } from '@/hooks/useScrollReveal'
 
 const testimonialData = [
   {
@@ -33,6 +34,7 @@ const testimonialData = [
 
 const TestimonialsSection = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
+  const { ref, isVisible } = useScrollReveal(0.1)
 
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonialData.length)
@@ -43,10 +45,12 @@ const TestimonialsSection = () => {
   }
 
   return (
-    <div className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 relative">
+    <div 
+      ref={ref}
+      className={`py-12 sm:py-16 lg:py-20 px-4 sm:px-6 relative scroll-animate-fade-in ${isVisible ? 'visible' : ''}`}>
       <div className="max-w-6xl mx-auto">
         {/* Testimonials Badge */}
-        <div className="flex justify-center mb-8 sm:mb-10 lg:mb-12">
+        <div className={`flex justify-center mb-8 sm:mb-10 lg:mb-12 scroll-animate-slide-up delay-100 ${isVisible ? 'visible' : ''}`}>
           <div className="bg-gray-100 rounded-full px-6 sm:px-8 py-2 sm:py-3">
             <span className="text-gray-800 font-medium tracking-wide text-sm sm:text-base">Testimonials</span>
           </div>

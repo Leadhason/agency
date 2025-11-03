@@ -1,6 +1,9 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
+import { useScrollReveal } from '@/hooks/useScrollReveal'
 
 const services = [
   {
@@ -32,15 +35,19 @@ const services = [
 ]
 
 const ServicesSection = () => {
+  const { ref, isVisible } = useScrollReveal(0.1)
+
   return (
-    <div className="py-12 sm:py-16 lg:py-20 p-2 sm:p-4 lg:p-5">
-      <div className="flex w-full items-center p-2 sm:p-4 lg:p-5 mb-6 sm:mb-8 lg:mb-10">
+    <div 
+      ref={ref}
+      className={`py-12 sm:py-16 lg:py-20 p-2 sm:p-4 lg:p-5 scroll-animate-fade-in ${isVisible ? 'visible' : ''}`}>
+      <div className={`flex w-full items-center p-2 sm:p-4 lg:p-5 mb-6 sm:mb-8 lg:mb-10 scroll-animate-slide-up delay-100 ${isVisible ? 'visible' : ''}`}>
             <p className="w-full max-w-2xl text-left text-2xl sm:text-4xl lg:text-5xl font-semibold leading-relaxed">Explore Our
             <br /> Services</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
-        {services.map((service) => (
-          <div key = {service.id} className="relative w-full h-64 sm:h-80 lg:max-h-[850px] lg:h-auto">
+        {services.map((service, index) => (
+          <div key = {service.id} className={`relative w-full h-64 sm:h-80 lg:max-h-[850px] lg:h-auto scroll-animate-slide-up delay-${200 + (index * 100)} ${isVisible ? 'visible' : ''}`}>
             <Image
               src={service.image}
               alt="player taking a shot"

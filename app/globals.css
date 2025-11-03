@@ -12,6 +12,101 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Custom animations */
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slide-in-left {
+  0% { opacity: 0; transform: translateX(-30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-in-right {
+  0% { opacity: 0; transform: translateX(30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-in-up {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Animation utility classes */
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 1s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 1s ease-out forwards;
+}
+
+.animate-slide-in-up {
+  animation: slide-in-up 1s ease-out forwards;
+}
+
+/* Scroll-triggered animation classes */
+.scroll-animate-fade-in {
+  opacity: 0;
+}
+
+.scroll-animate-fade-in.visible {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+.scroll-animate-slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.scroll-animate-slide-up.visible {
+  animation: slide-in-up 0.8s ease-out forwards;
+}
+
+.scroll-animate-slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.scroll-animate-slide-left.visible {
+  animation: slide-in-left 0.8s ease-out forwards;
+}
+
+.scroll-animate-slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.scroll-animate-slide-right.visible {
+  animation: slide-in-right 0.8s ease-out forwards;
+}
+
+/* Delay variants for staggered animations */
+.scroll-animate-slide-up.delay-100.visible {
+  animation: slide-in-up 0.8s ease-out 0.1s forwards;
+}
+
+.scroll-animate-slide-up.delay-200.visible {
+  animation: slide-in-up 0.8s ease-out 0.2s forwards;
+}
+
+.scroll-animate-slide-up.delay-300.visible {
+  animation: slide-in-up 0.8s ease-out 0.3s forwards;
+}
+
+.scroll-animate-slide-up.delay-400.visible {
+  animation: slide-in-up 0.8s ease-out 0.4s forwards;
+}
+
+.scroll-animate-slide-up.delay-500.visible {
+  animation: slide-in-up 0.8s ease-out 0.5s forwards;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #ffffff;

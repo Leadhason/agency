@@ -18,13 +18,13 @@ const Header = () => {
                 <Link href="/" className="hover:text-gray-700 cursor-pointer transition-all duration-300 group relative">Home
                     <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-[1.5px] bg-gray-700 group-hover:w-full transition-all duration-300"></span>
                 </Link>
-                <Link href="/"  className="hover:text-gray-700 cursor-pointer transition-all duration-300 group relative">About
+                <Link href="/about"  className="hover:text-gray-700 cursor-pointer transition-all duration-300 group relative">About
                     <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-[1.5px] bg-gray-700 group-hover:w-full transition-all duration-300"></span>
                 </Link>
-                <Link href="/"  className="hover:text-gray-700 cursor-pointer transition-all duration-300 group relative">Services
+                <Link href="/services"  className="hover:text-gray-700 cursor-pointer transition-all duration-300 group relative">Services
                     <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-[1.5px] bg-gray-700 group-hover:w-full transition-all duration-300"></span>
                 </Link>
-                <Link href="/"  className="hover:text-gray-700 cursor-pointer transition-all duration-300 group relative">Contact
+                <Link href="/contact"  className="hover:text-gray-700 cursor-pointer transition-all duration-300 group relative">Contact
                     <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-[1.5px] bg-gray-700 group-hover:w-full transition-all duration-300"></span>
                 </Link>
             </div>
@@ -82,7 +82,7 @@ const Header = () => {
                                     </span>
                                 </Link>
                                 <Link 
-                                    href="/" 
+                                    href="/about" 
                                     className="block text-4xl font-light text-gray-700 hover:text-black hover:text-yellow-600 transition-all duration-500 tracking-wide group"
                                     onClick={() => setIsMenuOpen(false)}
                                 >
@@ -92,7 +92,7 @@ const Header = () => {
                                     </span>
                                 </Link>
                                 <Link 
-                                    href="/" 
+                                    href="/services" 
                                     className="block text-4xl font-light text-gray-700 hover:text-black hover:text-yellow-600 transition-all duration-500 tracking-wide group"
                                     onClick={() => setIsMenuOpen(false)}
                                 >
@@ -102,7 +102,7 @@ const Header = () => {
                                     </span>
                                 </Link>
                                 <Link 
-                                    href="/" 
+                                    href="/contact" 
                                     className="block text-4xl font-light text-gray-700 hover:text-black hover:text-yellow-600 transition-all duration-500 tracking-wide group"
                                     onClick={() => setIsMenuOpen(false)}
                                 >
