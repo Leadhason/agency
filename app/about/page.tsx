@@ -11,6 +11,8 @@ import CTASection from '@/components/cta'
 const AboutPage = () => {
   const heroRef = useScrollReveal(0.1)
   const storyRef = useScrollReveal(0.1)
+  const testimonialsRef = useScrollReveal(0.1)
+  const foundersRef = useScrollReveal(0.1)
 
   return (
     <div className="bg-gray-100">
@@ -131,19 +133,22 @@ const AboutPage = () => {
       </div>
 
       {/* Testimonials Section */}
-      <div className="relative min-h-screen flex items-center justify-center bg-[#6A6E39]">
+      <div 
+        ref={testimonialsRef.ref}
+        className={`relative min-h-screen flex items-center justify-center bg-[#6A6E39] scroll-animate-fade-in ${testimonialsRef.isVisible ? 'visible' : ''}`}
+      >
         {/* Background Video/Image */}
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 text-center">
           
 
           {/* Testimonials Badge */}
-          <div className="inline-block bg-white/90 backdrop-blur-sm rounded-full px-6 py-2 mb-8">
+          <div className={`inline-block bg-white/90 backdrop-blur-sm rounded-full px-6 py-2 mb-8 scroll-animate-slide-up delay-100 ${testimonialsRef.isVisible ? 'visible' : ''}`}>
             <span className="text-gray-800 font-medium text-sm">Testimonials</span>
           </div>
 
           {/* Main Testimonial */}
-          <div className="max-w-3xl mx-auto mb-12 sm:mb-16">
+          <div className={`max-w-3xl mx-auto mb-12 sm:mb-16 scroll-animate-slide-up delay-200 ${testimonialsRef.isVisible ? 'visible' : ''}`}>
             <h2 className="text-xl sm:text-32l lg:text-3xl font-light text-white leading-relaxed mb-8">
               "Joining Empire Sports Agency was the best decision I've made for my 
               career. The support is exceptional & the community feels like family."
@@ -151,7 +156,7 @@ const AboutPage = () => {
           </div>
 
           {/* Profile Images and Info */}
-          <div className="flex flex-col items-center">
+          <div className={`flex flex-col items-center scroll-animate-slide-up delay-300 ${testimonialsRef.isVisible ? 'visible' : ''}`}>
             <div className="flex items-center gap-4 mb-6">
               <div className="w-16 h-16 rounded-full overflow-hidden border-3 border-white/50">
                 <Image
@@ -191,11 +196,14 @@ const AboutPage = () => {
       </div>
 
       {/* Meet the Founders Section */}
-      <div className="bg-gray-100 py-12 sm:py-16 lg:py-20">
+      <div 
+        ref={foundersRef.ref}
+        className={`bg-gray-100 py-12 sm:py-16 lg:py-20 scroll-animate-fade-in ${foundersRef.isVisible ? 'visible' : ''}`}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Section Header */}
-          <div className="mb-5 sm:mb-6 lg:mb-8">
+          <div className={`mb-5 sm:mb-6 lg:mb-8 scroll-animate-slide-up delay-100 ${foundersRef.isVisible ? 'visible' : ''}`}>
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
               Meet the founders
             </h2>
@@ -205,7 +213,7 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-7">
             
             {/* Founder 1 */}
-            <div className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-sm">
+            <div className={`bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-sm scroll-animate-slide-up delay-200 ${foundersRef.isVisible ? 'visible' : ''}`}>
               <div className="mb-6">
                 <Image
                   src="/player-1.jpeg"
@@ -226,7 +234,7 @@ const AboutPage = () => {
             </div>
 
             {/* Founder 2 */}
-            <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-sm">
+            <div className={`bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-sm scroll-animate-slide-up delay-300 ${foundersRef.isVisible ? 'visible' : ''}`}>
               <div className="mb-6">
                 <Image
                   src="/player-2.jpeg"
@@ -247,7 +255,7 @@ const AboutPage = () => {
             </div>
 
             {/* Founder 3 */}
-            <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg">
+            <div className={`bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg scroll-animate-slide-up delay-400 ${foundersRef.isVisible ? 'visible' : ''}`}>
               <div className="mb-6">
                 <Image
                   src="/player-3.jpeg"
